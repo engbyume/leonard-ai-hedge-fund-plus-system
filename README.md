@@ -33,6 +33,8 @@ This is a separate research record, not portfolio performance evidence. The exac
 
 The latest feasibility audit found at least two approved working-list names for 89 of 111 decision windows. Maximum consecutive feasible runs were 5 defensive, 4 growth-like, 6 oil-like, and 3 transition windows. The strict five-week gate therefore remains false for growth-like and transition states on this boundary. The working list is not a dated record of historical platform membership, and an expanded manifest remains unverified.
 
+An append-only refresh through the 2026-09-24 session added 9,702 bars for the fixed 3,154-symbol cohort, but the 2026-09-22 session has only 243 of 3,154 rows and the 2026-09-24 session has 3,153 of 3,154. September 22 was not a scheduled Nasdaq or NYSE holiday, and a bounded retry added no rows. The aligned feature cache still ends at label session 2026-09-18, so no new selector replay or accuracy claim was made.
+
 Read [the evidence methodology](docs/evidence-methodology.md), [the checkpoint table](evidence/weekly-checkpoints.csv), and [the progress narrative](evidence/progress.md) before drawing conclusions.
 
 ## Quick start
