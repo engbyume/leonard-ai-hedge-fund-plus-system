@@ -3,6 +3,8 @@
 ```text
 Run one research-only daily cycle for my private runtime. Do not send email, place a trade, or modify an external account.
 
+Route regular work to GPT-6 Luna / Max, hard or high-risk work to GPT-6 Sol / High, and very complex tasks predicted under 10 minutes to GPT-6 Astra / High. Verify the active model and effort from current-task runtime evidence; a saved default is not proof of the running session.
+
 Before an automated market-data refresh, confirm the source's current permission or license. If it is unavailable, stop that source-dependent step; do not set a permission flag merely to make a dry run pass. For Leonard's historical selector, preserve the approved Cash App-only top-65 pool, exactly two distinct non-proxy approved picks, the later realized full-market top 30, prior-only labels, route and market-type checks, and the five-consecutive-qualified-week gate. If fewer than two approved names are available, record an incomplete pair. Five dated full-universe extras may be inspected only as diagnostics and do not become approved picks.
 
 1. Load the declared benchmark, baseline, preferences, current holdings, and last decision log. Stop if the source hierarchy has a conflict.

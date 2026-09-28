@@ -6,12 +6,12 @@
 
 | Limit | Why it matters | Current boundary |
 | --- | --- | --- |
-| Historical Cash App membership | A stock in a market-data universe may not have been tradeable on the platform at a past decision. | The dated ETF-holdings cohort and a working list are research proxies. The expanded manifest has no verified operator or platform approval (SRC-010, SRC-015, SRC-019). |
-| Full and licensed price coverage | Missing or inaccessible labels weaken a fair replay. | The local source has September 24 bars but no September 25 session. The registered path stops before Yahoo-backed refresh without documented express permission. A licensed source or documented permission is needed before that path can run (SRC-020, SRC-023). |
-| Stable exact-pair accuracy | Isolated hits do not meet the promotion rule. | Protected v14 has longest streak one and `pass=false` on 106 windows (SRC-015). |
+| Historical Cash App membership | A stock in a market-data universe may not have been tradeable on the platform at a past decision. | The dated ETF-holdings cohort and a working list are research proxies. The expanded manifest has no verified operator or platform approval (SRC-010, SRC-027, SRC-031). |
+| Full and licensed price coverage | Missing or inaccessible labels weaken a fair replay. | The local source has September 24 bars but no September 25 session. The registered path stops before Yahoo-backed refresh without documented express permission. A licensed source or documented permission is needed before that path can run (SRC-032, SRC-035). |
+| Stable exact-pair accuracy | Isolated hits do not meet the promotion rule. | Protected v14 has longest streak one and `pass=false` on 106 windows (SRC-027). |
 | Portfolio baseline and costs | A reported spread cannot prove an end-to-end return edge without comparable cash flows and costs. | The July 11 baseline is not independently archived; later public rows are limited comparisons (SRC-003, SRC-009). |
 | Delivery content readback | A local preview or sent label does not prove the exact rendered body reached the recipient. | Metadata readback found a sent label, but the message body was not retrieved (SRC-012, SRC-014). |
-| TimesFM 3 generalization and license | A successful load or diagnostic forecast does not establish production rights or accuracy gains. | Explicit non-production opt-in only; no promotion or production accuracy claim (SRC-018). |
+| TimesFM 3 generalization and license | A successful load or diagnostic forecast does not establish production rights or accuracy gains. | Explicit non-production opt-in only; no promotion or production accuracy claim (SRC-030). |
 
 ## Next research steps
 

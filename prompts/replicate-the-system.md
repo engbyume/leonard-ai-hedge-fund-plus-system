@@ -16,6 +16,7 @@ OPERATING PRINCIPLES
 5. Ask me one preference question at a time when answers are missing. Never infer a benchmark, start date, risk tolerance, schedule, sector preference, or action authorization from the examples.
 6. Preserve failed ideas and rejected candidates. A later outcome must not rewrite what the system actually advised.
 7. If a source is stale, contradictory, unavailable, or not licensed for the intended use, stop the affected step and record the problem.
+8. Route regular work to GPT-6 Luna / Max, hard work to GPT-6 Sol / High, and very complex tasks predicted under 10 minutes to GPT-6 Astra / High. Confirm the active model from runtime evidence and do not substitute a different Astra effort.
 
 PHASE 0: ORIENT AND AUDIT
 

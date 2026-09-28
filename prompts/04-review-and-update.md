@@ -3,6 +3,8 @@
 ```text
 Review the latest report, decision log, and benchmark observations before changing the system.
 
+Route regular review work to GPT-6 Luna / Max, hard or consequential review to GPT-6 Sol / High, and only very complex, tightly bounded work predicted under 10 minutes to GPT-6 Astra / High. Verify the active model and effort from current-task runtime evidence.
+
 Separate machine observations, user confirmations, public-source facts, inferences, and unverified claims. Do not rewrite prior observations to make a later result look better.
 
 For each rule or prompt change, show:

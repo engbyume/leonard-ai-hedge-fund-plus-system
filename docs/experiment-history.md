@@ -14,7 +14,7 @@ This page is a guided summary of dated research records from August and Septembe
 | September 3 to September 7 | Could market-type robustness or a policy tournament stabilize the pair? | Group-robust logistic, temporal policy choice, pairwise ranking, and policy combinations remained below the five-week gate. A method that improved one route could regress another. |
 | September 12 to September 21 | Is the approved pool itself a ceiling? | The five-extra branch showed why unapproved names must stay diagnostic. The approved working-list audit found both realized winners available in 89 of 111 decisions, with market-type feasibility limits. |
 
-The historical figures above describe their dated cache and label boundary (SRC-018, SRC-019, SRC-024). They are not a combined leaderboard and should not be compared with the 106-window protected v14 artifact without matching decision and label sessions.
+The historical figures above describe their dated cache and label boundary (SRC-030, SRC-031, SRC-036). They are not a combined leaderboard and should not be compared with the 106-window protected v14 artifact without matching decision and label sessions.
 
 ## Representative failures and what changed
 
@@ -32,7 +32,7 @@ Defensive, growth-like, oil-like, and transition are diagnostic market-type grou
 
 ### Forecasting experiments
 
-Kronos and TimesFM 3 estimate future paths; they do not replace the exact-pair replay. The TimesFM 3 diagnostic used an explicit non-production opt-in and did not show a validated improvement over protected v14. A successfully loaded model or finite forecast is a runtime check, not a promotion result (SRC-018).
+Kronos and TimesFM 3 estimate future paths; they do not replace the exact-pair replay. The TimesFM 3 diagnostic used an explicit non-production opt-in and did not show a validated improvement over protected v14. A successfully loaded model or finite forecast is a runtime check, not a promotion result (SRC-030).
 
 ## Rules retained after failed branches
 

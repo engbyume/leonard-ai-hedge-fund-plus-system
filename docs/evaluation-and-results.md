@@ -24,15 +24,15 @@ These rows do not establish durable benchmark outperformance. The July 11 trial-
 4. Keep the strict prior-label cutoff, causal, global, state-route, and market-type checks. Evaluate candidate and baseline on identical decision and label sessions.
 5. Require five consecutive qualified weeks before promotion. Record all failed windows and contract violations.
 
-> **Current protected result:** On September 28, 2026, v14 reports three qualified weeks across 106 evaluated windows. The longest qualified streak is one; `pass=false`. The simple exact-pair hit fraction is 3/106, about 2.83%, on this artifact's own window set. This is not a portfolio return or a forecast-error score (SRC-015).
+> **Current protected result:** On September 28, 2026, v14 reports three qualified weeks across 106 evaluated windows. The longest qualified streak is one; `pass=false`. The simple exact-pair hit fraction is 3/106, about 2.83%, on this artifact's own window set. This is not a portfolio return or a forecast-error score (SRC-027).
 
 ### Point-in-time safeguards
 
-The official v14 artifact uses a dated research cohort derived from IWB and IWM holdings snapshots. Each decision uses the latest snapshot strictly before the decision session. This is an ETF-holdings proxy, not exact historical index membership or proof of Cash App tradeability. It retains 74 bar and price-volume signals and 25 dated SEC event signals. The SEC inputs require source-backed timestamps at or before the decision cutoff; current sector and market-cap metadata stay out of the official replay (SRC-015).
+The official v14 artifact uses a dated research cohort derived from IWB and IWM holdings snapshots. Each decision uses the latest snapshot strictly before the decision session. This is an ETF-holdings proxy, not exact historical index membership or proof of Cash App tradeability. It retains 74 bar and price-volume signals and 25 dated SEC event signals. The SEC inputs require source-backed timestamps at or before the decision cutoff; current sector and market-cap metadata stay out of the official replay (SRC-027).
 
 The later label is the adjusted-close return at the exact fifth subsequent trusted market session. Rows without a later label are excluded from training and realized-rank scoring, rather than treated as misses. A cached window is bound to its price-store and dated-universe inputs so new bars cannot silently reuse an old evaluation. These controls reduce look-ahead risk, but provider records without a publication timestamp and historical platform membership still limit what the replay can prove.
 
-The September 21 approved working-list audit found both realized top-30 names in its 677-name list in 89 of 111 decisions. Maximum feasible runs were five defensive, four growth-like, six oil-like, and three transition. This is a **feasibility ceiling**, not achieved accuracy or proof of dated Cash App availability. Growth-like and transition could not reach five consecutive feasible decisions on that boundary (SRC-010, SRC-019).
+The September 21 approved working-list audit found both realized top-30 names in its 677-name list in 89 of 111 decisions. Maximum feasible runs were five defensive, four growth-like, six oil-like, and three transition. This is a **feasibility ceiling**, not achieved accuracy or proof of dated Cash App availability. Growth-like and transition could not reach five consecutive feasible decisions on that boundary (SRC-010, SRC-031).
 
 ## Evidence grades
 

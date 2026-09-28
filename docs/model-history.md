@@ -10,9 +10,21 @@ Leonard combines **agent research**, **forecast evidence**, and a **historical s
 | --- | --- | --- |
 | Research agents | Review fundamentals, technical behavior, sentiment, catalysts, and risk; a portfolio role combines the findings. | The upstream AI Hedge Fund project provides the original agent-workflow reference. Leonard adds its own gates and evidence records. |
 | Kronos | Optional price-path forecast evidence. | The public interface links to Kronos. A missing dependency can leave a dry report without a fresh forecast; a rendered report alone does not prove model use. |
-| Protected v14 | Official historical replay baseline, using 74 bar and price-volume signals plus 25 dated SEC event signals. | The current artifact identifies a walk-forward ridge selector, 99 official features, 106 evaluated windows, and `pass=false` (SRC-015). |
-| Diagnostic selectors | Test alternative ranking, grouping, market-state, pair, and support methods against the same strict contract. | Tested alternatives in the dated notes did not establish a five-week pass or a validated improvement over protected v14 (SRC-011, SRC-018, SRC-019). |
-| TimesFM 3 | Separate time-series forecasting experiment, not an LLM. | Current private adapter names version 3.0.1 and the public checkpoint; use requires explicit non-production opt-in. It has not earned production use or an accuracy claim (SRC-018). |
+| Protected v14 | Official historical replay baseline, using 74 bar and price-volume signals plus 25 dated SEC event signals. | The current artifact identifies a walk-forward ridge selector, 99 official features, 106 evaluated windows, and `pass=false` (SRC-027). |
+| Diagnostic selectors | Test alternative ranking, grouping, market-state, pair, and support methods against the same strict contract. | Tested alternatives in the dated notes did not establish a five-week pass or a validated improvement over protected v14 (SRC-011, SRC-030, SRC-031). |
+| TimesFM 3 | Separate time-series forecasting experiment, not an LLM. | Current private adapter names version 3.0.1 and the public checkpoint; use requires explicit non-production opt-in. It has not earned production use or an accuracy claim (SRC-030). |
+
+## Task model routing
+
+Task routing selects the language model that performs the research or code work. It is separate from the forecasting model that estimates a price path.
+
+| Task class | Preferred model | Effort |
+| --- | --- | --- |
+| Regular or bounded work | GPT-6 Luna | Max |
+| Hard, complex, or high-risk work | GPT-6 Sol | High |
+| Very complex work expected under 10 minutes | GPT-6 Astra | High |
+
+The active model must be checked from current-task runtime evidence. A saved preference or role file is not proof that a running session uses that route. The current routing preference is operator-directed and dated in the [source register](../evidence/source-register.md) (SRC-037).
 
 ## Why v14 is protected
 
