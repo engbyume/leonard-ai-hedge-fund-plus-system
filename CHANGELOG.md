@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### September 28, 2026 - Linked documentation and system map
+
+- Reorganized the public entry point into a concise orientation and navigation page under the human-facing Leonard name while preserving the `atlan-scale` Skill identifier.
+- Added linked progression, model-history, evaluation, results, limitations, and next-step pages plus an original generated system-map image and an exact text map.
+- Rechecked the protected v14 artifact and recorded its current hash, counts, false promotion gate, and evidence limits. No trade, email, scheduler action, or model promotion was performed.
+- Generalized personal naming, trade-limit amounts, and an account-specific paired plan in the public evidence narrative while preserving the decision and verification history.
+
 ### 2026-09-22 - Historical feasibility and no-send automation hardening
 
 - Defined and published the exact-pair hit-rate metric separately from portfolio returns. On the shared 106-window baseline slice, no tested route improved on protected v14.
@@ -21,7 +28,7 @@
 - Added an Atlan-inspired context-repository architecture without claiming Atlan affiliation.
 - Added links for Agent Skills, Kronos, the upstream AI Hedge Fund project, and the market-data, broker-readback, and delivery providers used by the private runtime.
 - Added preference-driven replication prompts, a portable skill, example configuration, evidence methodology, and publication audits.
-- Recorded the current Cash App decision as redacted operator evidence: SNOW was added, while DXCM was not purchased because the $150 trade limit was reached.
+- Recorded the current Cash App decision as redacted operator evidence: SNOW was added, while DXCM was not purchased because the operator's trade limit was reached.
 - Preserved the rule that no sale may appear without a corresponding buy or an explicitly documented proceeds hold.
 
 ### 2026-08-10 - Daily benchmark and candidate gates
