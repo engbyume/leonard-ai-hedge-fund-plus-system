@@ -17,6 +17,8 @@ For each rule or prompt change, show:
 
 Pay special attention to momentum exhaustion. A large one-day move that dominates the positive five-day return is an outlier warning, not a strength score. Keep company-specific catalysts separate from price momentum and require a catalyst for an individual-stock thesis.
 
+Check the historical selector against the unchanged Leonard contract: approved Cash App-only top 65, exactly two distinct non-proxy picks, realized full-market top 30, strictly prior labels, causal/global/state-route and market-type results, and five consecutive qualified weeks. Compare a diagnostic with protected v14 on identical decision and label sessions. An unverified expanded manifest, a one-name result, or a five-extra diagnostic cannot pass or change the gate. Review source permission before any new automated data collection.
+
 Check performance integrity: one benchmark, one baseline, same dates, same cash-flow treatment, costs, drawdown, downside capture, and data freshness. If the baseline is missing, keep the claim unverified.
 
 Check action integrity: no unmatched sells, no buys funded by unsettled proceeds, no unverified platform availability, and no external action without explicit authorization. Run the validator and a dry report after approved changes. Record failed ideas rather than deleting them.

@@ -3,6 +3,8 @@
 ```text
 Run one research-only daily cycle for my private runtime. Do not send email, place a trade, or modify an external account.
 
+Before an automated market-data refresh, confirm the source's current permission or license. If it is unavailable, stop that source-dependent step; do not set a permission flag merely to make a dry run pass. For Leonard's historical selector, preserve the approved Cash App-only top-65 pool, exactly two distinct non-proxy approved picks, the later realized full-market top 30, prior-only labels, route and market-type checks, and the five-consecutive-qualified-week gate. If fewer than two approved names are available, record an incomplete pair. Five dated full-universe extras may be inspected only as diagnostics and do not become approved picks.
+
 1. Load the declared benchmark, baseline, preferences, current holdings, and last decision log. Stop if the source hierarchy has a conflict.
 2. Confirm market session, analysis date, source freshness, and account scope. Keep separate accounts separate.
 3. Scan the approved universe broadly, then research individual company catalysts first. For each serious candidate record catalyst, date, persistence, source, confirmation, countercase, and invalidation.

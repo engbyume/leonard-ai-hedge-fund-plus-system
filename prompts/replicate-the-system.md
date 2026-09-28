@@ -148,6 +148,7 @@ Implement or configure a dry-run loop with these stages:
 
 1. Load private preferences and confirm the analysis date.
 2. Check source freshness, market session, provider status, and account scope.
+   Confirm documented permission or a license for automated market-data collection before the affected refresh. Stop that step if the access basis is unclear.
 3. Scan the approved universe broadly before selecting a small candidate set.
 4. Research individual catalysts before scoring momentum. Each candidate must name a company-specific event or operating driver, source, timing, expected persistence, confirmation signal, countercase, and invalidation.
 5. Calculate five daily returns, green/red breadth, late-versus-early momentum, and largest positive-day share of the positive five-day move.
@@ -171,6 +172,8 @@ Before using any result, verify:
 - model output includes source date and version
 - current platform availability is verified independently
 - action state distinguishes advice, approval, staging, settlement, execution, and measurement
+- a reproduction of Leonard's historical result keeps the approved Cash App-only top-65 pool, exactly two distinct non-proxy approved picks, the later realized full-market top 30, strictly prior labels, separate causal/global/state-route and market-type results, and five consecutive qualified weeks; a different operator scope must be labeled as a separate experiment
+- an approved-symbol scarcity check adds exactly five dated full-universe names only for diagnosis, ranks no more than the best one or two approved names using prior-only causal scores, and never treats an incomplete pair or unapproved extra as a qualifying selection
 
 If a reported result says the system is ahead by a percentage but the baseline or cash-flow treatment is missing, label it unverified. Do not round it into a confirmed claim.
 
