@@ -25,6 +25,7 @@ REQUIRED_FILES = [
     "docs/system-map.md",
     "docs/timeline.md",
     "docs/model-history.md",
+    "docs/experiment-history.md",
     "docs/evaluation-and-results.md",
     "docs/successes-and-failures.md",
     "docs/limitations-and-next-steps.md",

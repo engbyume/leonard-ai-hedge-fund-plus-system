@@ -25,4 +25,6 @@ Here, **success** can mean a safety or data-quality control worked. It does not 
 
 The [decision log](../evidence/decision-log.md) preserves why rules changed. The [evaluation page](evaluation-and-results.md) defines the different denominators behind these observations.
 
+For the deeper selector sequence, read the [historical experiment history](experiment-history.md).
+
 [Back to guide](guide.md)

@@ -12,6 +12,7 @@
 | [Visual and text system map](docs/system-map.md) | How sources, research, gates, reports, and evidence connect |
 | [Progression timeline](docs/timeline.md) | Dated changes and corrections |
 | [Model history](docs/model-history.md) | Agent roles, optional Kronos forecasts, v14, and diagnostic models |
+| [Historical experiments](docs/experiment-history.md) | The research questions and representative failed branches |
 | [Evaluation and results](docs/evaluation-and-results.md) | What the numbers measure and what they cannot prove |
 | [Successes and failures](docs/successes-and-failures.md) | Observed controls, rejected hypotheses, and open claims |
 | [Limitations and next steps](docs/limitations-and-next-steps.md) | Open data, availability, and delivery questions |

@@ -20,6 +20,8 @@ The historical selector must choose **exactly two distinct, non-proxy stocks** f
 
 The September 28 artifact reports three qualifying windows in 106 evaluations, but they do not form a five-week streak. Changing the target to a smaller market list or treating an unverified availability manifest as approved would change the question rather than improve the selector.
 
+The [historical experiment history](experiment-history.md) groups the diagnostic families by question and explains why isolated gains were not enough.
+
 ## What the experiments taught
 
 - **Extra features are not automatic gains.** Historical branches added dated market, filing, and peer information. The evaluated branches could lose qualified pairs even when their data lineage improved.

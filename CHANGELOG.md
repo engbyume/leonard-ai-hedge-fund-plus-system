@@ -8,6 +8,7 @@
 - Added linked progression, model-history, evaluation, results, limitations, and next-step pages plus an original generated system-map image and an exact text map.
 - Rechecked the protected v14 artifact and recorded its current hash, counts, false promotion gate, and evidence limits. No trade, email, scheduler action, or model promotion was performed.
 - Generalized personal naming, trade-limit amounts, and an account-specific paired plan in the public evidence narrative while preserving the decision and verification history.
+- Added a guided experiment-history page from dated local drafts and Obsidian notes without copying the raw research log or changing its original entries.
 
 ### 2026-09-22 - Historical feasibility and no-send automation hardening
 

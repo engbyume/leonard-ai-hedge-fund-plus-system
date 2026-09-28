@@ -8,6 +8,7 @@ Leonard is the human-facing name of this AI Hedge Fund research system. This pub
 | --- | --- |
 | What does the system do? | [System map](system-map.md) and [architecture](../ARCHITECTURE.md) |
 | How did it change? | [Progression timeline](timeline.md) and [model history](model-history.md) |
+| Which experiments were tried? | [Historical experiment history](experiment-history.md) |
 | What has been measured? | [Evaluation and results](evaluation-and-results.md) and [evidence methodology](evidence-methodology.md) |
 | What worked or failed? | [Successes and failures](successes-and-failures.md) |
 | What failed or remains open? | [Limitations and next steps](limitations-and-next-steps.md) |
