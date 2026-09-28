@@ -1,4 +1,4 @@
-# AI Hedge Fund Plus System
+# Leonard: An AI Hedge Fund Plus System
 
 Personal, public implementation of an Atlan-inspired context layer for a customized AI-assisted investment research workflow.
 
