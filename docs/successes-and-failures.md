@@ -12,6 +12,7 @@ Here, **success** can mean a safety or data-quality control worked. It does not 
 | September 21, 2026 | The aligned-label replay reported zero exact-two contract violations across 111 evaluated decisions. | Historical diagnostic contract only; no five-week pass (SRC-031). |
 | September 22, 2026 | A no-send report preview rendered with zero delivery attempts and zero proposed actions. | Local dry-run and focused tests, not proof of an external delivery (SRC-012). |
 | September 26, 2026 | The Yahoo permission gate stopped the registered path before refresh, report, and delivery. | A dated safety stop; it also left that run without a new report (SRC-032). |
+| September 28, 2026 | The 20:30 LaunchAgent run stopped at the Yahoo permission gate before refresh, report generation, and delivery. | Read-only dispatch-log observation; no new report or email attempt occurred (SRC-035). |
 
 ## Hypotheses that failed or remain open
 
