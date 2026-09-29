@@ -28,6 +28,8 @@ These rows do not establish durable benchmark outperformance. The July 11 trial-
 
 > **Separate offline diagnostic, September 28, 2026:** A fresh `historical_price_eval.py` run on the current dated store evaluated 110 windows from decision sessions 2024-07-05 through 2026-09-11. It reported three qualified weeks, a longest streak of one, and `pass=false`. The protected v14 artifact was not changed. This run did not compare a candidate strategy with v14, so it does not establish an accuracy improvement (SRC-039).
 
+> **Separate offline diagnostic, September 28, 2026:** A fresh `historical_price_eval.py` run on the current dated store evaluated 110 windows from decision sessions 2024-07-05 through 2026-09-11. It reported three qualified weeks, a longest streak of one, and `pass=false`. The protected v14 artifact was not changed. This run did not compare a candidate strategy with v14, so it does not establish an accuracy improvement (SRC-039).
+
 ### Point-in-time safeguards
 
 The official v14 artifact uses a dated research cohort derived from IWB and IWM holdings snapshots. Each decision uses the latest snapshot strictly before the decision session. This is an ETF-holdings proxy, not exact historical index membership or proof of Cash App tradeability. It retains 74 bar and price-volume signals and 25 dated SEC event signals. The SEC inputs require source-backed timestamps at or before the decision cutoff; current sector and market-cap metadata stay out of the official replay (SRC-027).
