@@ -2,6 +2,12 @@
 
 This log records what the system advised, what the operator chose, why the system changed, and what remains unproven. It separates advice from execution and outcome.
 
+## September 28, 2026 - Public validator privacy review
+
+- The public validator now detects email addresses with a generic pattern and stores no personal address in its source.
+- The README describes private runtime data as dated market inputs, not as proof of current data freshness.
+- The validator and repository audit must reject a synthetic email fixture while passing the current public tree.
+
 ## 2026-09-22 - Scheduled report sent-label readback
 
 - Read-only AgentMail metadata found one `sent`-labeled report at 20:31 local, matching the timestamp of the stored live-candidate report and the configured recipient.

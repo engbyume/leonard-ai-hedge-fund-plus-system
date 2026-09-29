@@ -69,7 +69,7 @@ SECRET_PATTERNS = [
 FORBIDDEN_PATTERNS = [
     re.compile(r"/Users/[A-Za-z0-9._-]+"),
     re.compile(r"/home/[A-Za-z0-9._-]+"),
-    re.compile(r"(?i)jiscool231@gmail\.com"),
+    re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"),
 ]
 
 RETIRED_FORECAST_PATTERNS = (

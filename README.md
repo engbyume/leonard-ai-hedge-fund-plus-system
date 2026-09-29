@@ -1,6 +1,6 @@
 # Leonard: AI Hedge Fund Plus System
 
-**Purpose:** Leonard is a personal, educational system for AI-assisted investment research. This public repository contains its method, portable prompts, source rules, and redacted evidence. The private runtime holds live data and account state. The repository name remains `ai-hedge-fund-plus-system`, and the public Skill remains [`atlan-scale`](skills/atlan-scale/SKILL.md).
+**Purpose:** Leonard is a personal, educational system for AI-assisted investment research. This public repository contains its method, portable prompts, source rules, and redacted evidence. The private runtime holds dated market inputs and account state. The repository name remains `ai-hedge-fund-plus-system`, and the public Skill remains [`atlan-scale`](skills/atlan-scale/SKILL.md).
 
 > **Status, September 28, 2026:** The protected v14 historical selector has **not** passed its five-consecutive-qualified-week gate. Its current artifact records three qualified weeks in 106 evaluated windows and a longest streak of one. No validated accuracy improvement or promotion is claimed. See [evaluation and results](docs/evaluation-and-results.md) and the [source register](evidence/source-register.md).
 
