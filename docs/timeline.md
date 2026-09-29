@@ -17,6 +17,7 @@ This timeline separates dated observations from reported starts. It does not inf
 | September 25 to September 27, 2026 | The September 25 report was blocked by Cash App availability with zero delivery attempts. The September 26 and 27 scheduled runs stopped before refresh, report generation, and delivery at the Yahoo permission gate. | Report metadata and scheduled logs; SRC-032 and SRC-035 |
 | September 28, 2026 | The protected v14 artifact still reports `pass=false`, 106 evaluated windows, three qualified weeks, and longest streak one. | Current local artifact hash and fields; SRC-027 |
 | September 28, 2026 | The local historical price source is intact through September 24 with 3,182 bars for that session, but no September 25 bars were observed. New collection remains permission-gated. | Read-only SQLite query and loaded-job inspection; SRC-035 |
+| September 28, 2026 | An official-source screen found candidate price providers, but none is selected or verified for the full historical cohort. | Vendor documentation and license pages; no account, API request, purchase, or source change; SRC-038 |
 
 ## How to read this history
 
