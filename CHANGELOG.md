@@ -13,6 +13,7 @@
 - Added the same task-routing hierarchy to the model-history page with the active-model evidence boundary.
 - Added a dated official-source screen of historical price providers and recorded the remaining authorization and cohort-coverage gates.
 - Recorded the September 28 scheduled run's Yahoo permission-gate stop from the canonical dispatch log; no refresh, report, or delivery occurred.
+- Recorded a separate offline evaluator result on the current dated store: 110 windows, 3 qualified weeks, longest streak 1, and `pass=false`; protected v14 was unchanged.
 - Replaced a hard-coded personal-address pattern in the public validator with generic email detection and clarified that private runtime inputs are dated.
 - Updated public replication prompts to keep the protected historical contract and source-permission gate explicit; the separate local prompt drafts remain untouched.
 
