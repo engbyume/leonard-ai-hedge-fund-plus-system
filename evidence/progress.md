@@ -16,7 +16,7 @@ Focused verification passed 35 canonical automation tests and 24 targeted privat
 
 The latest redacted machine observation is the 2026-08-10 report, using market closes through 2026-08-07. The experiment's own report text says a two-month trial began on 2026-07-11, but a separately archived 2026-07-11 baseline is not present in the public evidence. The all-time figure is therefore an open-position comparison from the first confirmed position date, not a verified trial-start result.
 
-Jeremy believes the portfolio may be about 3% ahead of the S&P since the start. That is retained as a user-reported hypothesis, not a measured claim. The latest month spread is -0.38 percentage points versus SPY, and the latest all-time open-position spread is -0.16 percentage points, so the available evidence does not support saying that the system is consistently beating the benchmark.
+The operator believes the portfolio may be about 3% ahead of the S&P since the start. That is retained as a user-reported hypothesis, not a measured claim. The latest month spread is -0.38 percentage points versus SPY, and the latest all-time open-position spread is -0.16 percentage points, so the available evidence does not support saying that the system is consistently beating the benchmark.
 
 ## What the observations suggest
 
@@ -33,7 +33,7 @@ The operating rules became more catalyst-first and exhaustion-aware after the sy
 
 ## Latest operator decision
 
-On 2026-08-08, Jeremy confirmed that SNOW had been added to Cash App. DXCM was not purchased because the $150 trade limit was reached. The 2026-08-10 private report keeps an expected contribution outside buying power until arrival is confirmed, shows three standalone ETF reviews when no ETF fails its replacement gate, and compares GWRE and VEEV against SNOW. YUMC is excluded from the candidate universe. The public record contains no account value, cost basis, recipient, or order identifier.
+On August 8, 2026, the operator confirmed that SNOW had been added to Cash App. DXCM was not purchased because a trade limit was reached. The August 10 private report keeps an expected contribution outside buying power until arrival is confirmed, shows three standalone ETF reviews when no ETF fails its replacement gate, and compares GWRE and VEEV against SNOW. YUMC is excluded from the candidate universe. The public record contains no account value, cost basis, recipient, or order identifier.
 
 ## What must be measured next
 

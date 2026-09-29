@@ -21,7 +21,14 @@ REQUIRED_FILES = [
     "ARCHITECTURE.md",
     "THIRD_PARTY_NOTICES.md",
     "docs/purpose-and-success.md",
+    "docs/guide.md",
     "docs/system-map.md",
+    "docs/timeline.md",
+    "docs/model-history.md",
+    "docs/experiment-history.md",
+    "docs/evaluation-and-results.md",
+    "docs/successes-and-failures.md",
+    "docs/limitations-and-next-steps.md",
     "docs/reproduction.md",
     "docs/privacy-and-publication.md",
     "docs/evidence-methodology.md",
@@ -48,6 +55,7 @@ REQUIRED_FILES = [
     "evidence/decision-log.md",
     "evidence/source-register.md",
     "scripts/validate_repo.py",
+    "assets/leonard-system-map.png",
 ]
 
 SECRET_PATTERNS = [
@@ -61,10 +69,13 @@ SECRET_PATTERNS = [
 FORBIDDEN_PATTERNS = [
     re.compile(r"/Users/[A-Za-z0-9._-]+"),
     re.compile(r"/home/[A-Za-z0-9._-]+"),
-    re.compile(r"(?i)jiscool231@gmail\.com"),
+    re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"),
 ]
 
-RETIRED_FORECAST_TERMS = ("chrono" + "s", "times" + "fm")
+RETIRED_FORECAST_PATTERNS = (
+    re.compile("chrono" + "s", re.IGNORECASE),
+    re.compile(r"times" + r"fm[-_ ]?(?:1(?:\.0)?|2(?:\.5)?|2p5)\b", re.IGNORECASE),
+)
 
 
 def read_text(path: Path) -> str:
@@ -94,9 +105,8 @@ def check_public_text(errors: list[str]) -> None:
         for pattern in FORBIDDEN_PATTERNS:
             if pattern.search(content):
                 errors.append(f"private path or identity pattern in {relative}: {pattern.pattern}")
-        lower_content = content.lower()
-        for term in RETIRED_FORECAST_TERMS:
-            if term in lower_content:
+        for pattern in RETIRED_FORECAST_PATTERNS:
+            if pattern.search(content):
                 errors.append(f"retired forecast reference in {relative}")
 
 
@@ -112,6 +122,18 @@ def check_links(errors: list[str]) -> None:
         errors.append("integrations/tools.md has too few public links")
     if any(url.startswith("http://") for url in urls):
         errors.append("all integration URLs must use HTTPS")
+
+
+def check_local_links(errors: list[str]) -> None:
+    for path in ROOT.rglob("*.md"):
+        if ".git" in path.parts:
+            continue
+        for target in re.findall(r"!?\[[^\]]+\]\(([^)]+)\)", read_text(path)):
+            if target.startswith(("https://", "http://", "mailto:", "#")):
+                continue
+            relative_target = target.split("#", 1)[0]
+            if relative_target and not (path.parent / relative_target).exists():
+                errors.append(f"broken local link in {path.relative_to(ROOT)}: {target}")
 
 
 def check_skill(errors: list[str]) -> None:
@@ -176,6 +198,10 @@ def check_evidence(errors: list[str]) -> None:
     if rows and not required.issubset(rows[0]):
         errors.append("evidence CSV is missing required columns")
     for index, row in enumerate(rows, start=2):
+        if None in row:
+            errors.append(f"evidence row {index} has extra unquoted fields")
+        if any(value is None for value in row.values()):
+            errors.append(f"evidence row {index} has missing fields")
         try:
             portfolio = float(row["portfolio_return_pct"])
             benchmark = float(row["benchmark_return_pct"])
@@ -194,6 +220,7 @@ def main() -> int:
     check_required(errors)
     check_public_text(errors)
     check_links(errors)
+    check_local_links(errors)
     check_skill(errors)
     check_prompts(errors)
     check_readme(errors)
