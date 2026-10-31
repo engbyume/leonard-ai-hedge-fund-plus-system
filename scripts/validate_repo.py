@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import csv
+from collections import Counter
+import os
 import re
 import sys
 from pathlib import Path
@@ -21,7 +23,15 @@ REQUIRED_FILES = [
     "ARCHITECTURE.md",
     "THIRD_PARTY_NOTICES.md",
     "docs/purpose-and-success.md",
+    "docs/guide.md",
+    "docs/evaluation-and-results.md",
+    "docs/experiment-history.md",
+    "docs/limitations-and-next-steps.md",
+    "docs/timeline.md",
     "docs/system-map.md",
+    "docs/model-history.md",
+    "docs/source-authority.md",
+    "docs/reference-patterns.md",
     "docs/reproduction.md",
     "docs/privacy-and-publication.md",
     "docs/evidence-methodology.md",
@@ -47,6 +57,7 @@ REQUIRED_FILES = [
     "evidence/weekly-checkpoints.csv",
     "evidence/decision-log.md",
     "evidence/source-register.md",
+    "evidence/success-failure-analysis.md",
     "scripts/validate_repo.py",
 ]
 
@@ -64,7 +75,7 @@ FORBIDDEN_PATTERNS = [
     re.compile(r"(?i)jiscool231@gmail\.com"),
 ]
 
-RETIRED_FORECAST_TERMS = ("chrono" + "s", "times" + "fm")
+RETIRED_FORECAST_TERMS = ("chrono" + "s", "times" + "fm 1.0", "times" + "fm-1.0", "times" + "fm 2.5", "times" + "fm-2.5")
 
 
 def read_text(path: Path) -> str:
@@ -77,27 +88,63 @@ def check_required(errors: list[str]) -> None:
             errors.append(f"missing required file: {relative}")
 
 
+def check_forecast_reference(relative: Path, lower_content: str, errors: list[str]) -> None:
+    for term in RETIRED_FORECAST_TERMS:
+        if term in lower_content:
+            errors.append(f"retired forecast reference in {relative}")
+    model_name = "times" + "fm"
+    supported_version = model_name + " 3.0"
+    allowed_paths = (
+        "README.md",
+        "CHANGELOG.md",
+        "evidence/source-register.md",
+        "docs/model-history.md",
+    )
+    if model_name in lower_content and (
+        supported_version not in lower_content or relative.as_posix() not in allowed_paths
+    ):
+        errors.append(f"unsupported forecast model reference in {relative}")
+
+
+PUBLIC_TEXT_EXCLUDED_DIRS = {".git", "node_modules", "dist", "graft"}
+
+
+def iter_public_text_files():
+    for root, directories, filenames in os.walk(ROOT):
+        directories[:] = sorted(
+            directory for directory in directories
+            if directory not in PUBLIC_TEXT_EXCLUDED_DIRS
+        )
+        for filename in filenames:
+            if filename == ".git":
+                continue
+            path = Path(root) / filename
+            if path.is_file():
+                yield path
+
+
+def check_public_text_file(path: Path, errors: list[str]) -> None:
+    try:
+        content = read_text(path)
+    except (UnicodeDecodeError, OSError):
+        return
+    relative = path.relative_to(ROOT)
+    if chr(0x2014) in content:
+        errors.append(f"em dash is not allowed: {relative}")
+    for pattern in SECRET_PATTERNS:
+        if pattern.search(content):
+            errors.append(f"possible secret pattern in {relative}: {pattern.pattern}")
+    for pattern in FORBIDDEN_PATTERNS:
+        if pattern.search(content):
+            errors.append(f"private path or identity pattern in {relative}: {pattern.pattern}")
+    check_forecast_reference(relative, content.lower(), errors)
+
+
 def check_public_text(errors: list[str]) -> None:
-    for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts:
-            continue
-        try:
-            content = read_text(path)
-        except (UnicodeDecodeError, OSError):
-            continue
-        relative = path.relative_to(ROOT)
-        if "\u2014" in content:
-            errors.append(f"em dash is not allowed: {relative}")
-        for pattern in SECRET_PATTERNS:
-            if pattern.search(content):
-                errors.append(f"possible secret pattern in {relative}: {pattern.pattern}")
-        for pattern in FORBIDDEN_PATTERNS:
-            if pattern.search(content):
-                errors.append(f"private path or identity pattern in {relative}: {pattern.pattern}")
-        lower_content = content.lower()
-        for term in RETIRED_FORECAST_TERMS:
-            if term in lower_content:
-                errors.append(f"retired forecast reference in {relative}")
+    # Scan ignored files too, except vendor, build, and Git output that is not published.
+    for path in iter_public_text_files():
+        check_public_text_file(path, errors)
+
 
 
 def check_links(errors: list[str]) -> None:
@@ -146,11 +193,48 @@ def check_readme(errors: list[str]) -> None:
     if not path.is_file():
         return
     text = read_text(path).lower()
-    for term in ("purpose", "evidence", "public", "private", "install", "not financial advice", "kronos"):
+    for term in ("purpose", "evidence", "public", "private", "install", "not financial advice", "kronos", "forecast model history"):
         if term not in text:
             errors.append(f"README is missing required concept: {term}")
     if "ai-hedge-fund-plus-system" not in text:
         errors.append("README does not name the requested repository")
+
+
+def check_model_history(errors: list[str]) -> None:
+    path = ROOT / "docs/model-history.md"
+    if not path.is_file():
+        return
+    text = read_text(path).lower()
+    required = (
+        "times" + "fm 3.0",
+        "non-commercial",
+        "non-production",
+        "opt-in",
+        "fake model outputs",
+        "no direct call site",
+        "src-002",
+        "src-184",
+    )
+    for term in required:
+        if term not in text:
+            errors.append(f"model-history page is missing required evidence: {term}")
+    readme = read_text(ROOT / "README.md").lower()
+    if "docs/model-history.md" not in readme:
+        errors.append("README does not link to the model-history page")
+    register = read_text(ROOT / "evidence/source-register.md").lower()
+    license_url = "https://huggingface.co/google/" + "times" + "fm-3.0-pytorch/blob/main/license"
+    if "src-184" not in register or license_url not in register:
+        errors.append("model-history source register entry is missing or incomplete")
+
+
+def check_source_register(errors: list[str]) -> None:
+    path = ROOT / "evidence/source-register.md"
+    if not path.is_file():
+        return
+    ids = re.findall(r"^\|\s*(SRC-\d+)\s*\|", read_text(path), re.MULTILINE)
+    duplicates = sorted(identifier for identifier, count in Counter(ids).items() if count > 1)
+    if duplicates:
+        errors.append("source register has duplicate IDs: " + ", ".join(duplicates))
 
 
 def check_evidence(errors: list[str]) -> None:
@@ -197,7 +281,9 @@ def main() -> int:
     check_skill(errors)
     check_prompts(errors)
     check_readme(errors)
+    check_model_history(errors)
     check_evidence(errors)
+    check_source_register(errors)
     if errors:
         print("PUBLICATION AUDIT FAILED")
         for error in errors:

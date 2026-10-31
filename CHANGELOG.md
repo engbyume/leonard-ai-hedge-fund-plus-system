@@ -21,7 +21,7 @@
 - Added an Atlan-inspired context-repository architecture without claiming Atlan affiliation.
 - Added links for Agent Skills, Kronos, the upstream AI Hedge Fund project, and the market-data, broker-readback, and delivery providers used by the private runtime.
 - Added preference-driven replication prompts, a portable skill, example configuration, evidence methodology, and publication audits.
-- Recorded the current Cash App decision as redacted operator evidence: SNOW was added, while DXCM was not purchased because the $150 trade limit was reached.
+- Recorded a redacted operator update; account activity and amounts are excluded from public documentation.
 - Preserved the rule that no sale may appear without a corresponding buy or an explicitly documented proceeds hold.
 
 ### 2026-08-10 - Daily benchmark and candidate gates
@@ -29,9 +29,16 @@
 - Made daily, five-session, monthly, and open-position all-time benchmark comparisons use current market-close data instead of a stale user-confirmed daily percentage.
 - Added a pending Fidelity funding record that is excluded from buying power until the operator confirms arrival.
 - Enforced three ETF-only 04A cards, including standalone held-ETF reviews when no replacement gate fails.
-- Enforced two daily 04B individual-stock cards, with one SNOW replacement and one future-add candidate that both beat SNOW's current forecasts and clear catalyst and momentum-exhaustion gates.
+- Enforced two daily 04B individual-stock cards with catalyst and momentum-exhaustion gates; account-specific ticker and forecast details are excluded here.
 - Removed the obsolete model references and retained Kronos as the sole forecast-model link.
 
 ## Change-log practice
 
 Every future system change should include its date, the advice or evidence that motivated it, the operator's decision, the files or rules changed, and the verification result. Failed ideas remain in the log with their failure condition.
+
+### 2026-10-30 - Reconcile AI Hedge Fund documentation
+
+- Added a reading guide, research timeline, experiment history, evaluation summary, and limitations page.
+- Reconciled source-register identifiers while preserving dated AIHF evidence and excluding unrelated project material from this candidate.
+- Expanded the publication validator to require the new documentation pages and reject repeated source identifiers.
+- Validation result is recorded in the source register and evidence progress after checks run. This local review candidate has not been published.

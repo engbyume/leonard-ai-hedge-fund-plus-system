@@ -13,6 +13,14 @@
 | Delivery | Dry-run report, local artifact, optional email or scheduler | Public procedure; credentials and recipients private |
 | Evidence | Timestamped redacted metrics and decision rationale | Public aggregate record |
 
+## Independent workflows
+
+The standalone simulated app, the canonical scheduled report, and the offline historical replay are separate paths. Evidence from one path does not establish that another path ran or passed its gates.
+
+- **Standalone simulated app:** performs a broad-market screen and hypothetical portfolio analysis. It does not prove Cash App availability, point-in-time membership, or historical eligibility.
+- **Canonical scheduled report:** passes the source-permission gate before dispatch and report generation, then checks report rendering and Cash App availability. Email requires a separate authorization. A scheduled run or generated report does not prove delivery.
+- **Offline historical replay:** keeps the Cash App top-65 frozen, uses prior-only inputs and labels, and selects exactly two distinct non-proxy names against the unchanged full-market realized top-30 target. Causal, global, state-route, and market-type gates must pass for five consecutive qualified weeks before promotion can qualify. Under approved-symbol scarcity, exactly five dated full-universe extras feed a prior-only ranking, and only the best one or two approved Cash App symbols can be selected. Unapproved extras stay diagnostic-only.
+
 ## Context-repository lifecycle
 
 1. Bootstrap context from public sources and the operator's answers.
