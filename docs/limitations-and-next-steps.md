@@ -12,3 +12,7 @@ The entries below distinguish recorded evidence from work still needed. They do 
 | Sector and ETF research | A stock-selection result does not prove one-month sector or ETF ranking accuracy. | A separate dated universe, holdings and price inputs, a frozen evaluation protocol, baselines, and an untouched holdout. |
 
 The [evaluation page](evaluation-and-results.md), [progress narrative](../evidence/progress.md), and [source register](../evidence/source-register.md) provide the dated evidence behind these limits. A provider's advertised coverage is not proof that an account, license, or specific data set meets the project's requirements.
+
+## Phase-two target confirmed, October 30, 2026
+
+The phase-two goal is five consecutive monthly forecasts. Each forecast names the five best-performing sectors or industries over the following month. Evaluate ETF rankings separately, including Fidelity-held funds and a broad U.S.-investable ETF universe. This remains a target, not a measured result: the sector/ETF engine, point-in-time universe, and frozen walk-forward evaluation have not been implemented. The user's confirmation and current evidence boundary are recorded in [SRC-268](../evidence/source-register.md#src-268).
