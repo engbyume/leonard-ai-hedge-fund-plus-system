@@ -1,4 +1,4 @@
-# Leonard AI Hedge Fund Plus System
+# Leonard: An AI Hedge Fund Plus System
 
 Public documentation and redacted evidence for AI-assisted investment research. Private runtime, credentials, account data, and live account state stay outside this repository.
 
