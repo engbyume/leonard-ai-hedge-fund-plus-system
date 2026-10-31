@@ -7,8 +7,8 @@ The portable context skill is [`atlan-scale`](skills/atlan-scale/SKILL.md). This
 ## Start here
 
 ```bash
-git clone https://github.com/engbyume/ai-hedge-fund-plus-system.git
-cd ai-hedge-fund-plus-system
+git clone https://github.com/engbyume/leonard-ai-hedge-fund-plus-system.git
+cd leonard-ai-hedge-fund-plus-system
 python3 scripts/validate_repo.py
 ```
 
@@ -26,8 +26,6 @@ python3 scripts/validate_repo.py
 The repository documents three separate paths: a simulated app, a source-gated scheduled report, and an offline historical replay. Results from one path do not prove another passed. See the [architecture](ARCHITECTURE.md) and [text system map](docs/system-map.md).
 
 ## Documentation
-
-Use the [documentation guide](docs/guide.md) for a reading path through the system, experiments, and evidence.
 
 Use the [documentation guide](docs/guide.md) for a reading path through the system, experiments, and evidence.
 

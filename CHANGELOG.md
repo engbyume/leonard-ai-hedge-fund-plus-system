@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### 2026-10-31 - Documentation audit follow-up
+
+- Updated README and reproduction clone commands to the current public GitHub slug, removed a duplicate guide sentence, and aligned the validator's repository-name check.
+- Reframed SnapTrade as a capability reference for account data, without asserting a user's account link, and added dated source entry SRC-270.
+- Narrowed SRC-268's historical URL-check wording and added SRC-269 to state exactly what the validator checks; no project-wide Markdown link or claim-source coverage is claimed.
+
 ### 2026-09-22 - Historical feasibility and no-send automation hardening
 
 - Defined and published the exact-pair hit-rate metric separately from portfolio returns. On the shared 106-window baseline slice, no tested route improved on protected v14.

@@ -196,8 +196,8 @@ def check_readme(errors: list[str]) -> None:
     for term in ("purpose", "evidence", "public", "private", "install", "not financial advice", "kronos", "forecast model history"):
         if term not in text:
             errors.append(f"README is missing required concept: {term}")
-    if "ai-hedge-fund-plus-system" not in text:
-        errors.append("README does not name the requested repository")
+    if "leonard-ai-hedge-fund-plus-system" not in text:
+        errors.append("README does not name the current public repository")
 
 
 def check_model_history(errors: list[str]) -> None:
