@@ -7,6 +7,19 @@
 - Updated README and reproduction clone commands to the current public GitHub slug, removed a duplicate guide sentence, and aligned the validator's repository-name check.
 - Reframed SnapTrade as a capability reference for account data, without asserting a user's account link, and added dated source entry SRC-270.
 - Narrowed SRC-268's historical URL-check wording and added SRC-269 to state exactly what the validator checks; no project-wide Markdown link or claim-source coverage is claimed.
+- Added SRC-271 to document QuantConnect's Free Cloud data access, no-export terms, Free-plan API limit, and the prior zero-row probe; no account query or dataset request was made.
+
+### 2026-11-03 - QuantConnect source boundary recheck
+
+- Rechecked the official Terms, pricing, tier-features, and US Equities pages. The Terms list paid export paths through a purchased CLI data license or a signed institutional derived-data agreement; neither was used or authorized. The Free plan still excludes API access while allowing Cloud data use. The US Equities page describes live SIP coverage that excludes OTC and lists all historical data at daily resolution. Account entitlement, exact ETF coverage, and the top-five signal list's exportability remain unverified. Added SRC-272.
+
+### 2026-11-03 - Phase-two target and prototype status
+
+- Corrected the public phase-two target citation and updated its status: the private prototype is synthetic-only, with no validated real-data forecast or causal walk-forward result. Added SRC-273 and SRC-274; exact holdings remain private.
+
+### 2026-11-03 - Historical account-detail redaction
+
+- Generalized account-specific security and transaction-limit references in the public history. Retained aggregate benchmark percentages under the existing publication policy. Recorded the review in SRC-275.
 
 ### 2026-09-22 - Historical feasibility and no-send automation hardening
 

@@ -87,7 +87,7 @@ The operating rules became more catalyst-first and exhaustion-aware after the sy
 
 ## Latest operator decision
 
-On August 8, 2026, Jeremy confirmed that SNOW had been added to Cash App. DXCM was not purchased because the $150 trade limit was reached. The August 10, 2026 private report keeps an expected contribution outside buying power until arrival is confirmed, shows three standalone ETF reviews when no ETF fails its replacement gate, and compares GWRE and VEEV against SNOW. YUMC is excluded from the candidate universe. The public record contains no account value, cost basis, recipient, or order identifier.
+On August 8, 2026, a user-confirmed portfolio update changed the held-position state in the canonical snapshot. Unpurchased candidates remained outside holdings, and a pending contribution remained outside buying power until arrival was confirmed. The public record omits security names, transaction limits, balance values, and order identifiers. This is workflow evidence, not a broker-verified transaction or performance result.
 
 ## What must be measured next
 

@@ -922,35 +922,35 @@ This log records what the system advised, what Jeremy chose, why the system chan
 
 ## August 3, 2026 - Momentum-exhaustion correction and replacement decision
 
-- Advice received: DXCM had a tangible company catalyst, but its largest positive day contributed 71% of its positive five-day move. SNOW had a specific data-cloud and AI-platform thesis. YUMC was the replacement watchlist comparison after DXCM failed the exhaustion gate.
-- Jeremy's decision: keep the 60% threshold as a hard exclusion, do not use the 71% statistic as a positive signal, and treat SNOW and YUMC as watchlist or holding-state decisions subject to availability.
-- System change: reject weekly replacement candidates at or above 60% largest-up-day share, invalidate stale DXCM watchlists, and keep watchlist cards distinct from trade instructions.
-- Verification: the corrected report omitted DXCM from the eligible watchlist and retained the candidate availability warning.
-- Unproven: whether YUMC or SNOW will outperform after the catalyst window and after execution costs.
+- Advice received: a stock candidate had a concrete catalyst, but its largest positive day supplied 71% of its five-day rise. An alternative candidate remained after the exhaustion gate failed.
+- User decision: keep the 60% concentration threshold as a hard exclusion, do not use a large-day share as a positive signal, and separate held positions from research candidates.
+- System change: reject candidates at or above the concentration threshold and keep research cards distinct from trade instructions.
+- Verification: the corrected report omitted the ineligible candidate and retained the availability warning.
+- Unproven: whether another candidate will outperform after the catalyst window and execution costs.
 
 ## August 3, 2026 - Paired action invariant
 
 - Advice received: a proposed Fidelity sale must not appear by itself.
 - Jeremy's decision: require a corresponding buy or explicitly approved proceeds hold for every sale.
-- System change: preserve the paired plan of SELL XLV with BUY CIBR, QQQ, and XLF in the private action renderer, with settlement required before dependent buys.
+- System change: require each proposed sale to pair with a corresponding purchase or an approved proceeds-hold instruction, with settlement required before dependent buys.
 - Verification: dry-render and focused tests confirmed no unmatched sale in the reviewed plan.
 - Unproven: execution and settlement until an authorized account readback confirms them.
 
-## August 8, 2026 - SNOW added, DXCM unbought because of the trade limit
+## August 8, 2026 - Held-position confirmation and candidate exclusion
 
-- Advice received: the prior watchlist contained SNOW and DXCM as possible individual-stock candidates, with availability requiring manual confirmation.
-- Jeremy's decision: confirm SNOW was added to Cash App; do not record DXCM as held because the $150 trade limit was reached.
-- System change: update the private holdings source's confirmation date and preserve SNOW as a value-pending holding while retaining DXCM as unbought.
-- Verification: the canonical JSON parses, the generator reads that file as its Cash App source of truth, and the next report is expected to show SNOW as held rather than as a new candidate.
-- Unproven: SNOW's cost basis, current value, sale proceeds, and realized performance.
+- Advice received: a prior report contained individual-stock candidates whose availability required manual confirmation.
+- User decision: update held positions only after confirmation; do not record an unpurchased candidate as held.
+- System change: update the canonical holdings snapshot's confirmation date and keep any unverified market value pending.
+- Verification: the canonical snapshot parses and the generator reads it as the source for current holdings. The render separates held positions from research candidates.
+- Unproven: cost basis, current market value, sale proceeds, and realized performance remain unavailable.
 
 ## August 10, 2026 - Daily benchmark refresh and one-held-stock watchlist correction
 
-- Advice received: refresh Fidelity versus SPY from current market-close data every report, keep the pending contribution outside buying power until Jeremy confirms arrival, always show ETF coverage, and compare individual-stock candidates against SNOW without retaining the weaker YUMC idea.
-- Jeremy's decision: expect a Fidelity contribution during the current week but do not treat it as landed; require one SNOW replacement candidate and one better future-add candidate while keeping all proposed sells paired with buys or an approved proceeds hold.
-- System change: daily, weekly, monthly, and all-time open-position benchmark fields now use fresh report calculations; ETF coverage falls back to three standalone ETF reviews when no replacement gate fails; the Cash App stock ranking requires both forecast horizons to beat the held baseline and excludes YUMC.
+- Advice received: refresh the portfolio benchmark from current closes in every report, keep any pending contribution outside buying power until arrival is confirmed, always show ETF coverage, and compare individual-stock candidates against the held baseline.
+- User decision: keep pending contributions outside buying power until confirmed; require separate replacement and future-add comparisons; keep proposed sells paired with buys or an approved proceeds hold.
+- System change: daily, weekly, monthly, and open-position benchmark fields use fresh report calculations; ETF coverage falls back to three standalone reviews when no replacement gate fails; stock ranking requires both forecast horizons to beat the held baseline and excludes rejected candidates.
 - Verification: the August 10, 2026 report measured Fidelity at +0.30% for the day, +2.13% for the latest five-session week, +2.49% for the latest 21-session month, and +4.09% open-position since June 12, 2026, versus SPY at +0.61%, +3.51%, +2.87%, and +4.25%. The report used market closes through August 7, 2026 and was dry-rendered without delivery.
-- Current watchlist result: GWRE is the SNOW replacement comparison and VEEV is the better future-add comparison. Official company releases provide the catalyst context, while forecasts remain model evidence rather than realized performance.
+- Current watchlist result: the report compared one replacement candidate and one future-add candidate against the held baseline. Official company releases provide catalyst context; forecasts remain model evidence rather than realized performance.
 - Unproven: the pending contribution date, current cost basis, realized proceeds, and whether either watchlist candidate will outperform after availability, costs, and execution constraints.
 ## August 30, 2026 - Autonomous historical information-source expansion
 
@@ -1092,3 +1092,30 @@ This log records what the system advised, what Jeremy chose, why the system chan
 - QuantConnect Cloud remains the closest candidate. Its free Cloud Coarse Universe is broad and excludes OTC stocks, but current account entitlement, the latest actual history date, immutable-vintage coverage, and per-decision cutoff safety remain unverified. Local bulk downloads are paid.
 - LSEG describes historical data for selected indices with quarterly-in-arrears updates. NYSE Daily TAQ has a purchase path and no index-membership history. SEC EDGAR has no-auth access but does not provide daily prices or index constituents.
 - Keep the IWB/IWM replay diagnostic-only. The exact full-market source, latest complete label, September 22 row lineage, and dated Cash App approval ledger remain unresolved. No account access, data query, provider request, download, purchase, or promotion occurred. Source: SRC-227.
+
+## October 31, 2026 - QuantConnect Cloud data-export boundary
+
+- QuantConnect Terms v1.5, updated October 8, define Platform Data to include market data plus portions or transformations from which source values can be reconstructed or approximated. Data must remain inside QuantConnect; export is limited to user-owned source code and permitted summaries of the user's own backtests/live trading that are not designed to convey Platform Data.
+- Official Free-tier documentation allows Cloud datasets and backtesting, but the current pricing matrix shows QuantConnect API access is unavailable on Free. US Equities Cloud documentation describes SIP coverage excluding OTC and daily historical access, but does not establish the precise ETF universe or current dates available to this account.
+- The earlier authorized AAPL cloud probe SRC-196 returned zero rows with a future-history warning and a runtime clock dated July 6. It does not prove current coverage. No project, account, query, download, subscription, or export was attempted in this recheck.
+- Decision: QuantConnect may be considered for an in-platform backtest summary only. It is not a local price feed or the existing email pipeline's data source. The exportability of a one-month top-five signal list is not established; do not move it into a local report or email. No source was selected.
+- Sources: https://www.quantconnect.com/terms, https://www.quantconnect.com/pricing, https://www.quantconnect.com/docs/v2/cloud-platform/datasets/quantconnect/us-equities, and https://www.quantconnect.com/docs/v2/cloud-platform/organizations/tier-features.
+
+## November 3, 2026 - QuantConnect terms and Free-plan recheck
+
+- Re-read the official Terms, pricing, tier-features, and US Equities pages. Terms v1.5, last updated October 8, define Platform Data to include market data and transformations from which original values can be reconstructed or approximated. They prohibit external extraction except under a purchased CLI data license or a signed institutional Derived Data Agreement. They also permit a user's own source code and ordinary backtest or live-trading summaries only when those outputs are not designed or used to convey Platform Data. No paid license or institutional agreement was used or authorized for this task.
+- Current plan documentation allows Free-tier Cloud dataset use for research and backtests, while the pricing table marks API access unavailable on Free. The US Equities page describes live SIP coverage across exchanges excluding OTC and separately lists all historical data at daily resolution. These statements do not verify account-specific entitlement, exact ETF coverage, symbol-level available dates, or point-in-time vintages.
+- The earlier AAPL Cloud probe recorded as SRC-196 returned zero rows with a future-history warning and a runtime clock dated July 6; it does not establish current coverage. No new project, account query, dataset request, subscription, export, or purchase occurred.
+- Decision: keep QuantConnect as an in-platform candidate only. The exportability of a one-month top-five sector or industry list remains unverified, so do not use QuantConnect data in the local AIHF engine or its email report. No data source was selected.
+- Sources: https://www.quantconnect.com/terms, https://www.quantconnect.com/pricing, https://www.quantconnect.com/docs/v2/cloud-platform/datasets/quantconnect/us-equities, and https://www.quantconnect.com/docs/v2/cloud-platform/organizations/tier-features.
+
+## November 3, 2026 - Phase-two target and evidence status
+
+- User confirmation sets the target at five consecutive monthly forecasts, each selecting the following month's top five sectors or industries. ETF rankings are scored separately. Source: SRC-273.
+- A private offline prototype has separate sector, industry, and ETF ranking paths, but its inputs are caller-supplied and its tests use synthetic data. No complete point-in-time universe, real-data forecast, causal walk-forward result, or five-month accuracy streak is established. Source: SRC-274.
+- Decision: keep the target as an unproven research goal. Do not report accuracy or use its rankings for portfolio guidance until a rights-cleared, complete point-in-time data bundle and frozen causal evaluation pass their own gates. No real forecast, provider request, trade, or account access occurred.
+
+## November 3, 2026 - Public-history privacy correction
+
+- Generalized account-specific holding and transaction-limit details in the historical narrative while retaining dated aggregate benchmark percentages permitted by the publication policy. Source: SRC-275.
+- No balance, recipient, order identifier, raw report, licensed data file, or private filesystem path was added. No external action occurred.
