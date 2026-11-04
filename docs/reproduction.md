@@ -7,8 +7,8 @@ This guide reproduces the public method without importing any private account st
 Clone the repository into a new directory and create a private `runtime/` directory. The runtime is ignored by Git and should contain only local configuration, generated reports, and provider-specific secrets.
 
 ```bash
-git clone https://github.com/engbyume/ai-hedge-fund-plus-system.git
-cd ai-hedge-fund-plus-system
+git clone https://github.com/engbyume/leonard-ai-hedge-fund-plus-system.git
+cd leonard-ai-hedge-fund-plus-system
 python3 scripts/validate_repo.py
 mkdir -p runtime
 ```

@@ -1,7 +1,7 @@
 # Install and verify public components
 
 ```text
-You are installing optional, public components for the AI Hedge Fund Plus System. Inspect the host before installing anything. Show me the proposed packages, versions, licenses, storage needs, Python compatibility, GPU requirements, and network access for each component.
+You are installing optional, public components for Leonard, the AI Hedge Fund Plus System. Inspect the host before installing anything. Show me the proposed packages, versions, licenses, storage needs, Python compatibility, GPU requirements, and network access for each component.
 
 Use the public links in integrations/tools.md. The relevant components are the Agent Skills format, Kronos, yfinance, and the configured broker-readback or delivery providers. Do not download private skills, arbitrary code, model weights, cookies, credentials, or account exports. Do not use a third-party repository as a source of truth when its license or compatibility is unclear.
 
