@@ -21,6 +21,10 @@
 
 - Generalized account-specific security and transaction-limit references in the public history. Retained aggregate benchmark percentages under the existing publication policy. Recorded the review in SRC-275.
 
+### 2026-11-03 - Account-specific holding privacy rule
+
+- Clarified that the public documentation excludes current and historical account-linked holdings, positions, watchlists, and transaction limits. Added SRC-276.
+
 ### 2026-09-22 - Historical feasibility and no-send automation hardening
 
 - Defined and published the exact-pair hit-rate metric separately from portfolio returns. On the shared 106-window baseline slice, no tested route improved on protected v14.

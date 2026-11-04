@@ -1119,3 +1119,7 @@ This log records what the system advised, what Jeremy chose, why the system chan
 
 - Generalized account-specific holding and transaction-limit details in the historical narrative while retaining dated aggregate benchmark percentages permitted by the publication policy. Source: SRC-275.
 - No balance, recipient, order identifier, raw report, licensed data file, or private filesystem path was added. No external action occurred.
+
+## November 3, 2026 - Account-specific publication boundary
+
+- The public privacy policy now explicitly keeps current and historical account-linked holdings, individual positions, watchlist membership, and transaction limits private. Public stock examples may remain only when they are not presented as a user's account state. Source: SRC-276.

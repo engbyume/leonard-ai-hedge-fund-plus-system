@@ -14,6 +14,7 @@
 - provider keys, email tokens, cookies, session files, and `.env` files
 - broker account numbers, recipient addresses, and exact balances
 - exact order amounts if they can identify the account or expose personal finances
+- current or historical account-specific holdings, individual positions, account-linked watchlist membership, and transaction limits
 - raw generated reports, raw email bodies, local logs, SQLite databases, cached market exports, and home-directory paths
 - data files copied from licensed services without permission
 
@@ -24,6 +25,7 @@
 3. Keep event dates and decision dates when they are needed to reproduce reasoning.
 4. Mark each statement as machine-observed, user-confirmed, public-source, or inference.
 5. Never turn an unverified user belief into a measured performance claim.
+6. Replace account-linked tickers and actions with role labels. Keep public ticker examples only when they are not presented as holdings or account-specific watchlist items.
 
 ## Local runtime pattern
 
